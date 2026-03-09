@@ -19,7 +19,17 @@ create a website
 //     });
 
 // ^ prints the ENTIRE RESPONSE object to the call; 1st step to ensure I can bring in and inspect the full response
+// ============================================================
+// Adding buttons via id's in html
+// const artBtn = document.querySelector(#get-art);
+// const artistBtn = document.querySelector(#get-artist);
+// const randomBtn = document.querySelector(#get-random);
 
+// //api display from my fetch
+// const title = document.querySelector(#art-title);
+// const artist = document.querySelector(#artist-name);
+// const image = document.querySelector(#art-image);
+// ============================================================
 
 fetch('https://api.artic.edu/api/v1/artworks')
     .then(response => response.json()) //.then sends a request, then we get access to the response / returns a promise 
@@ -28,6 +38,8 @@ fetch('https://api.artic.edu/api/v1/artworks')
         console.log(data.data[0].title); //datapoint 1
         console.log(data.data[0].artist_display) //datapoint 2
         console.log(data.data[0].image_id) //datapoint 3 //image of artwork
+
+        
     })
     .catch(error => {
         console.error("Error fetching data:", error);
