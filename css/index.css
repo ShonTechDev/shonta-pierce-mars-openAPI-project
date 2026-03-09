@@ -1,0 +1,42 @@
+body{
+    /* background-color:#0b1b68; */
+    background-color:#b4dcf5;
+    /* background-color: #001167; */
+    text-align: center;
+}
+
+header nav ul {
+    /* position: fixed; */
+    width: 100%;
+    background-color: rgb(4, 2, 77);
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    padding-top: 0.7rem;
+    list-style-type: none;
+    font-family: serif;
+    font-weight: 500;
+    font-size: small;    
+    color: white;
+}
+
+/* .welcome-banner{
+    background-color: blue;
+    height: 4rem;
+    padding-top: 1.5rem;
+} */
+.grid-gallery{
+    border: 2px green solid;
+}
+.art-flex-box {
+    display: flex;
+    border: 2px black solid;
+    width: 50%;
+    justify-content: center;
+}
+
+.hero-section {
+    border: 2px black solid;
+    /* background-image: ; */
+}
