@@ -109,4 +109,5 @@ function fetchArtWork() {
         }
 
     artBtn.addEventListener("click", fetchArtWork);
-    // artistBtn.addEventListener("click", fetchRandomArtWork); removed extra button on html
+    // artistBtn.addEventListener("click", fetchRandomArtWork); 
+    // removed extra button on html
