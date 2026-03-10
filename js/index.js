@@ -32,6 +32,11 @@ const image = document.querySelector("#art-image");
 
 //adding selector for grid rows to place recent art there
 const gridRows = document.querySelectorAll(".art-flex-box div");
+
+//additional viewing buttons
+const randomMoreBtn = document.querySelector("#get-random-more");
+randomMoreBtn.addEventListener("click", fetchRandomArtWork);
+
 // ============================================================
 
 

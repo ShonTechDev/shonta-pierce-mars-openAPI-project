@@ -35,26 +35,27 @@
         <p>paragraph explaining what the Art Explorer does and what the user needs to do/enter</p>
     <section class="welcome-banner">
         <h3>Start Exploring:</h3> <!--cursive font-->
-        <button id="get-art">Get Most Recent Art</button>
+        <a href="#Recent-Art"><button id="get-art">Get Most Recent Art</button></a>
         <!-- <button id="get-artist">Get Artist</button> -->
-        <button id="get-random">Get Random Artwork</button>
+        <a href="#Gaze-Gallery"><button id="get-random">Get Random Artwork</button></a>
     </section>
     </section>
     <section class="about-the-artwork">
         <h3>About the Artwork</h3>
-        <p>a paragraph about where the API is pulling from/where the art is from and it's venue/this art is displayed in the [insert link to venu]</p>
+        <p>a paragraph about where the API is pulling from/where the art is from and it's venue/this art is displayed in the [insert link to venue]</p>
     </section>
-
-    <section class="single-art-gaze">
+    <!-------------------------- SINGLE RANDOMIZED ART---------------->
+    <section id="Gaze-Gallery" class="single-art-gaze">
         <h2>Art Admiration Zone: Art Gaze with Us</h2>
         <h4 id="art-title">Art Title</h4>
         <div>
             <img id="art-image" src="" alt="Artwork">
         </div>
-        <span id="artist-name">Art Artist</span> <!--make signature font-->
+        <span id="artist-name">Art Artist</span> <!--make signature font--> <br>
+        <a href="#Gaze-Gallery"><button id="get-random-more">View More Art</button></a>
     </section>
     <!-------------------------- GRID ART GALLERY ---------------->
-    <section class="grid-gallery">
+    <section id="Recent-Art" class="grid-gallery">
         <h3>Art Exploration Zone: 3 Most Recent Artworks</h3>
         <div class="art-flex-box">
             <div class="row-1">

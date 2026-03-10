@@ -92,3 +92,8 @@ a {
     font-weight: lighter;
     padding-left: 25%;
 }
+
+.single-art-gaze img {
+    width: 450px;
+    height: auto;
+}
