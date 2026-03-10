@@ -29,6 +29,9 @@ const randomBtn = document.querySelector("#get-random");
 const title = document.querySelector("#art-title");
 const artist = document.querySelector("#artist-name");
 const image = document.querySelector("#art-image");
+
+//adding selector for grid rows
+const gridRows = document.querySelector("#.art-flex-box div");
 // ============================================================
 
 
@@ -85,6 +88,9 @@ function fetchArtWork() {
                 //storing vs console.log
 
                 const artworks = data.data; //no index
+
+                const artworksWithImages = artworks.filter(art => art.image_id); //filter out "null" images or artwork that do not have images attached (since site is "viewing" gallery)
+
                 const randomIndex = Math.floor(Math.random() * artworks.length);
 
                 const artwork = artworks[randomIndex]; //select random index for artwork
@@ -109,5 +115,6 @@ function fetchArtWork() {
         }
 
     artBtn.addEventListener("click", fetchArtWork);
+    randomBtn.addEventListener("click", fetchRandomArtWork);
     // artistBtn.addEventListener("click", fetchRandomArtWork); 
     // removed extra button on html
