@@ -3,9 +3,11 @@
 <head>
     <title>Shonta Pierce's Open API Project</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---Font--->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Momo+Signature&family=Patrick+Hand&display=swap" rel="stylesheet">
     <!-- link to css -->
     <link rel="stylesheet" href="css/index.css">
 
@@ -14,15 +16,72 @@
     <header>
         <nav>
             <ul>
-                <li></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Art-Explorer">Art Explorer</a></li>
+                <li><a href="#Recent-Art">By Recent Art</a></li>
+                <li><a href="#Gaze-Gallery">Gaze the Gallery</a></li>
+                <li><a href="#Visit-Museum">Visit The Museum</a></li>
+                <li class="portolio-nav-link"><a href="https://classresume-portfolio-sp.netlify.app/" target="_blank">My Portfolio</a></li>
+                <!-- <li>Nav Item 4</li> -->
             </ul>
         </nav>
     </header>
-    <section>
-
+    <section id="#Home" class="welcome-banner">
+        <h3>Explore Art with:</h3> <!--cursive font-->
     </section>
-    <script src="js/index.js">
+    <section class="hero-section">
+        <h1>The Art Institute of Chicago</h1>
+        <h2>Art Explorer</h2> <!--over an art pallete img-->
+        <p>paragraph explaining what the Art Explorer does and what the user needs to do/enter</p>
+    <section class="welcome-banner">
+        <h3>Start Exploring:</h3> <!--cursive font-->
+        <a href="#Recent-Art"><button id="get-art">Get Most Recent Art</button></a>
+        <!-- <button id="get-artist">Get Artist</button> -->
+        <a href="#Gaze-Gallery"><button id="get-random">Get Random Artwork</button></a>
+    </section>
+    </section>
+    <section class="about-the-artwork">
+        <h3>About the Artwork</h3>
+        <p>a paragraph about where the API is pulling from/where the art is from and it's venue/this art is displayed in the [insert link to venue]</p>
+    </section>
+    <!-------------------------- SINGLE RANDOMIZED ART---------------->
+    <section id="Gaze-Gallery" class="single-art-gaze">
+        <h2>Art Admiration Zone: Art Gaze with Us</h2>
+        <h4 id="art-title">Art Title</h4>
+        <div>
+            <img id="art-image" src="" alt="Artwork">
+        </div>
+        <span id="artist-name">Art Artist</span> <!--make signature font--> <br>
+        <a href="#Gaze-Gallery"><button id="get-random-more">View More Art</button></a>
+    </section>
+    <!-------------------------- GRID ART GALLERY ---------------->
+    <section id="Recent-Art" class="grid-gallery">
+        <h3>Art Exploration Zone: 3 Most Recent Artworks</h3>
+        <div class="art-flex-box">
+            <div class="row-1">
+                <h4>Art Title</h4>
+                <img class="grid-art-mini-img" src="" alt="Artwork">
+                <h5>Artist</h5>
+            </div>
+            <div class="row-2">
+                <h4>Art Title</h4>
+                <img class="grid-art-mini-img" src="" alt="Artwork">
+                <h5>Artist</h5>
+            </div>
+            <div class="row-3">
+                <h4>Art Title</h4>
+                <img class="grid-art-mini-img" src="" alt="Artwork">
+                <h5>Artist</h5>
+            </div>
+        </div>
+    </section>
+    <!-----------------------^^^^^ GRID ART GALLERY ^^^^---------------->
+    <!-------------------- ABOUT THE ART INSTITUTION OF CHICAGO ---------------->
+    <section>
+        <h2>About the Art Institute of Chicago</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquam ut pariatur. Molestias saepe architecto veniam quod ullam deserunt qui, doloremque hic ut, dicta error, ducimus asperiores corporis dolor fugiat.</p>
+    </section>
 
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
