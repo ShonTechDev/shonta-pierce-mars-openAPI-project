@@ -49,7 +49,7 @@ a {
 
 .hero-section {
     border: 2px black solid;
-    background-image:url('/shonta-pierce-mars-openAPI-project/images/art_institute_gallery_gaze.jpg');
+    background-image:url('../images/art_institute_gallery_gaze.jpg');
     height: 600px;
     background-repeat: no-repeat;
     background-size: 100%;
