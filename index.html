@@ -16,17 +16,17 @@
     <header>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Art Explorer</li>
-                <li>By Art</li>
-                <li>By Artist</li>
-                <li>Visit The Museum</li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Art-Explorer">Art Explorer</a></li>
+                <li><a href="#Recent-Art">By Recent Art</a></li>
+                <li><a href="#Gaze-Gallery">Gaze the Gallery</a></li>
+                <li><a href="#Visit-Museum">Visit The Museum</a></li>
+                <li class="portolio-nav-link"><a href="https://classresume-portfolio-sp.netlify.app/" target="_blank">My Portfolio</a></li>
                 <!-- <li>Nav Item 4</li> -->
             </ul>
         </nav>
     </header>
-    <section class="welcome-banner">
+    <section id="#Home" class="welcome-banner">
         <h3>Explore Art with:</h3> <!--cursive font-->
     </section>
     <section class="hero-section">
@@ -44,8 +44,18 @@
         <h3>About the Artwork</h3>
         <p>a paragraph about where the API is pulling from/where the art is from and it's venue/this art is displayed in the [insert link to venu]</p>
     </section>
+
+    <section class="single-art-gaze">
+        <h2>Art Admiration Zone: Art Gaze with Us</h2>
+        <h4 id="art-title">Art Title</h4>
+        <div>
+            <img id="art-image" src="" alt="Artwork">
+        </div>
+        <span id="artist-name">Art Artist</span> <!--make signature font-->
+    </section>
+    <!-------------------------- GRID ART GALLERY ---------------->
     <section class="grid-gallery">
-        <h3>Art Exploration Zone</h3>
+        <h3>Art Exploration Zone: 3 Most Recent Artworks</h3>
         <div class="art-flex-box">
             <div class="row-1">
                 <h4>Art Title</h4>
@@ -61,21 +71,12 @@
             </div>
         </div>
     </section>
-    <section class="single-art-gaze">
-        <h2>Art Admiration Zone: Art Gaze with Us</h2>
-        <h4 id="art-title">Art Title</h4>
-        <div>
-            <img id="art-image" src="" alt="Artwork">
-        </div>
-        <span id="artist-name">Art Artist</span> <!--make signature-->
-    </section>
+    <!-----------------------^^^^^ GRID ART GALLERY ^^^^---------------->
+    <!-------------------- ABOUT THE ART INSTITUTION OF CHICAGO ---------------->
     <section>
         <h2>About the Art Institute of Chicago</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquam ut pariatur. Molestias saepe architecto veniam quod ullam deserunt qui, doloremque hic ut, dicta error, ducimus asperiores corporis dolor fugiat.</p>
     </section>
-
-
-
 
     <script src="js/index.js"></script>
 </body>

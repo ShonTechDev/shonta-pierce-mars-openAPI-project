@@ -30,47 +30,75 @@ const title = document.querySelector("#art-title");
 const artist = document.querySelector("#artist-name");
 const image = document.querySelector("#art-image");
 
-//adding selector for grid rows
-const gridRows = document.querySelector("#.art-flex-box div");
+//adding selector for grid rows to place recent art there
+const gridRows = document.querySelectorAll(".art-flex-box div");
 // ============================================================
 
 
-// ================================================ 1st Fetch art & artist ===================================================
+// ======= 1st artwork Fetch art & artist =================
 
-//fetch for Get Art button functionality
+//fetch for Get Most Recent Art button functionality
 
-function fetchArtWork() { 
-    fetch('https://api.artic.edu/api/v1/artworks')
-    .then(response => response.json()) //.then sends a request, then we get access to the response / returns a promise 
-    .then(data => {
-        // console.log(data); //gets all data in normal js format
-        console.log(data.data[0].title); //datapoint 1
-        console.log(data.data[0].artist_display) //datapoint 2
-        console.log(data.data[0].image_id) //datapoint 3 //image of artwork
-        //console.logs displayed in console for me to check
-        //variables created to work with and connect to my website
+// function fetchArtWork() { 
+//     fetch('https://api.artic.edu/api/v1/artworks')
+//     .then(response => response.json()) //.then sends a request, then we get access to the response / returns a promise 
+//     .then(data => {
+//         // console.log(data); //gets all data in normal js format
+//         console.log(data.data[0].title); //datapoint 1
+//         console.log(data.data[0].artist_display) //datapoint 2
+//         console.log(data.data[0].image_id) //datapoint 3 //image of artwork
+//         //console.logs displayed in console for me to check
+//         //variables created to work with and connect to my website
 
-        const artwork = data.data[0]; //first artwork
-        const artTitle = artwork.title;
-        const artArtist = artwork.artist_display;
-        const imageId = artwork.image_id;
+//         const artwork = data.data[0]; //first artwork
+//         const artTitle = artwork.title;
+//         const artArtist = artwork.artist_display;
+//         const imageId = artwork.image_id;
 
 
-        //artwork image url building from the image url equation
+//         //artwork image url building from the image url equation
 
-        const imageURL = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`;
+//         const imageURL = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`;
 
-        //display art on page
+//         //display art on page
 
-        title.textContent = artTitle;
-        artist.textContent = artArtist;
-        image.src = imageURL;
+//         title.textContent = artTitle;
+//         artist.textContent = artArtist;
+//         image.src = imageURL;
 
-    })
-    .catch(error => {
-        console.error("Error fetching data:", error);
-    });
-}
+//     })
+//     .catch(error => {
+//         console.error("Error fetching data:", error);
+//     });
+// }
+
+// ======= Most Recent 3 artworks Fetch art & artist =================
+
+        function fetchArtWork() {
+            fetch('https://api.artic.edu/api/v1/artworks')
+            .then(response => response.json())
+            .then(data => {
+                
+                const artworks = data.data;
+
+                //Populate Grid Gallery with first 3 artworks
+                for (let i = 0; i < 3; i++) {
+                    const artwork = artworks[i];
+                    const artTitle = artwork.title;
+                    const artArtist = artwork.artist_display;
+
+                    const row = gridRows[i];
+                    const rowTitle = row.querySelector("h4");
+                    const rowArtist = row.querySelector("span");
+
+                    rowTitle.textContent = artTitle;
+                    rowArtist.textContent = artArtist;
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+            });
+        }
 
     // ================================================ 2nd Fetch ====================randomizer===============================
 
@@ -80,7 +108,7 @@ function fetchArtWork() {
     //random art
 
     function fetchRandomArtWork() {
-        //second fetch / click navigation
+        //second fetch / click navigation / = Art Admiration Zone
         fetch('https://api.artic.edu/api/v1/artworks')
              .then(response => response.json()) //.then sends a request, then we get access to the response / returns a promise 
              .then(data => {

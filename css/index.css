@@ -21,6 +21,22 @@ header nav ul {
     color: white;
 }
 
+a:visited {
+    color: white;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.portfolio-nav-link li{
+    border: solid 2px white;
+    height: 100%;
+}
+
 /* .welcome-banner{
     background-color: blue;
     height: 4rem;
@@ -39,4 +55,8 @@ header nav ul {
 .hero-section {
     border: 2px black solid;
     /* background-image: ; */
+}
+
+#art-image {
+    height: 10%;
 }
