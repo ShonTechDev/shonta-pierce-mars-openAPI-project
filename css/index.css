@@ -102,3 +102,8 @@ a {
     width: 450px;
     height: auto;
 }
+
+#artist-image {
+    width: 200px;
+    height: auto;
+}
