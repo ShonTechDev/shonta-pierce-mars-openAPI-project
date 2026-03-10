@@ -89,7 +89,9 @@ const gridRows = document.querySelectorAll(".art-flex-box div");
 
                     const row = gridRows[i];
                     const rowTitle = row.querySelector("h4");
-                    const rowArtist = row.querySelector("span");
+                    const rowImage = row.querySelector("img");
+                    rowImage.src = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`; //added img element to grids
+                    const rowArtist = row.querySelector("span"); //added img elements to grid
 
                     rowTitle.textContent = artTitle;
                     rowArtist.textContent = artArtist;
@@ -135,7 +137,7 @@ const gridRows = document.querySelectorAll(".art-flex-box div");
 
                 title.textContent = artTitle;
                 artist.textContent = artArtist;
-                image.src = imageURL;
+                image.src = imageURL; //displays image
               })
               .catch(error => {
                 console.error("Error fetching data:", error);
