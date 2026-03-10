@@ -6,78 +6,32 @@ create a website
 -minimum 2 data points (ex. artist + art type)
 -2 different endpoints:
     - https://api.artic.edu/api/v1/artworks
-    - https://api.artic.edu/api/v1/artists
+    - https://api.artic.edu/api/v1/artists - my second endpoint  to add
 */
 
-// fetch('https://api.artic.edu/api/v1/artworks')
-//     .then(response => response.json()) //.then sends a request, then we get access to the response / returns a promise 
-//     .then(data => {
-//         console.log(data); //gets actual data in normal js format
-//     })
-//     .catch(error => {
-//         console.error("Error fetching data:", error);
-//     });
-
-// ^ prints the ENTIRE RESPONSE object to the call; 1st step to ensure I can bring in and inspect the full response
-// ============================================================
 // Adding buttons via id's in html
 const artBtn = document.querySelector("#get-art");
-// const artistBtn = document.querySelector("#get-artist"); removed extra "get artist button from html, removed here in js^^
 const randomBtn = document.querySelector("#get-random");
 
 //api display from my fetch
 const title = document.querySelector("#art-title");
 const artist = document.querySelector("#artist-name");
 const image = document.querySelector("#art-image");
-
 //adding selector for grid rows to place recent art there
 const gridRows = document.querySelectorAll(".art-flex-box div");
-
 //additional viewing buttons
 const randomMoreBtn = document.querySelector("#get-random-more");
 randomMoreBtn.addEventListener("click", fetchRandomArtWork);
 
-// ============================================================
+//2nd endpoint selectors for artists
+const artistBtn = document.querySelector("#get-artist");
+const artistInfo = document.querySelector("#artist-info");
+
+//artist image display
+const artistImage = document.querySelector("#artist-image");
 
 
-// ======= 1st artwork Fetch art & artist =================
-
-//fetch for Get Most Recent Art button functionality
-
-// function fetchArtWork() { 
-//     fetch('https://api.artic.edu/api/v1/artworks')
-//     .then(response => response.json()) //.then sends a request, then we get access to the response / returns a promise 
-//     .then(data => {
-//         // console.log(data); //gets all data in normal js format
-//         console.log(data.data[0].title); //datapoint 1
-//         console.log(data.data[0].artist_display) //datapoint 2
-//         console.log(data.data[0].image_id) //datapoint 3 //image of artwork
-//         //console.logs displayed in console for me to check
-//         //variables created to work with and connect to my website
-
-//         const artwork = data.data[0]; //first artwork
-//         const artTitle = artwork.title;
-//         const artArtist = artwork.artist_display;
-//         const imageId = artwork.image_id;
-
-
-//         //artwork image url building from the image url equation
-
-//         const imageURL = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`;
-
-//         //display art on page
-
-//         title.textContent = artTitle;
-//         artist.textContent = artArtist;
-//         image.src = imageURL;
-
-//     })
-//     .catch(error => {
-//         console.error("Error fetching data:", error);
-//     });
-// }
-
-// ======= Most Recent 3 artworks Fetch art & artist =================
+// ====== 1st 3 artworks as updated in API == Fetch art & artist =======
 
         function fetchArtWork() {
             fetch('https://api.artic.edu/api/v1/artworks?page=' + Math.floor(Math.random()*50) + '&limit=100')
@@ -107,14 +61,11 @@ randomMoreBtn.addEventListener("click", fetchRandomArtWork);
             });
         }
 
-    // ================================================ 2nd Fetch ====================randomizer===============================
+// ======== 2nd Fetch======randomizer===============
 
-    //adding 2nd fetch hw 
-    //implementing math.floor use my data.data[0] indexting to select a new piece and display it randomly as if walking through the gallery
+//implementing math.floor use my data.data[0] indexting to select a new piece and display it randomly as if walking through the gallery
 
 //'https://api.artic.edu/api/v1/artworks' original api for 1-12 artworks on 1st page
-
-    //random art
 
     function fetchRandomArtWork() {
         //second fetch / click navigation / = Art Admiration Zone
@@ -128,7 +79,7 @@ randomMoreBtn.addEventListener("click", fetchRandomArtWork);
 
                 const artworksWithImages = artworks.filter(art => art.image_id); //filter out "null" images or artwork that do not have images attached (since site is "viewing" gallery)
 
-                const randomIndex = Math.floor(Math.random() * artworks.length);
+                const randomIndex = Math.floor(Math.random() * artworksWithImages.length); //uses my filtered array to remove artwork without imgs
 
                 const artwork = artworks[randomIndex]; //select random index for artwork
 
@@ -151,7 +102,40 @@ randomMoreBtn.addEventListener("click", fetchRandomArtWork);
             });
         }
 
+// ================= Artist Spotlight ===============
+
+function fetchArtist() {
+    fetch('https://api.artic.edu/api/v1/artists')
+        .then(response => response.json())
+        .then(data => {
+            
+            const artists = data.data;
+            
+            const randomIndex = Math.floor(Math.random() * artists.length);
+            const artist = artists[randomIndex];
+    
+            const artistName = artist.title;
+            const nationality = artist.nationality;
+
+            artistInfo.textContent = artistName + " - " + nationality; //concatenated to display desired info
+
+            //adding artist image URL 
+            const imageId = artist.image_id;
+
+            // if (imageId !== null) {
+            //     artistImage.src = `https://www.artic.edu/iiif/2/${imageId}/full/400,/0/default.jpg`;
+            // } else {
+            //     artistImage.src = ""; //if none
+            // }
+
+        })
+        .catch(error => {
+            console.error("Error fetching artist:", error);
+        });
+}
+
+
+    //connecting the buttons to the endpoints
     artBtn.addEventListener("click", fetchArtWork);
     randomBtn.addEventListener("click", fetchRandomArtWork);
-    // artistBtn.addEventListener("click", fetchRandomArtWork); 
-    // removed extra button on html
+    artistBtn.addEventListener("click", fetchArtist); 
