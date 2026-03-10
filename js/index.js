@@ -91,7 +91,7 @@ const gridRows = document.querySelectorAll(".art-flex-box div");
                     const rowTitle = row.querySelector("h4");
                     const rowImage = row.querySelector("img");
                     rowImage.src = `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`; //added img element to grids
-                    const rowArtist = row.querySelector("span"); //added img elements to grid
+                    const rowArtist = row.querySelector("h5"); //added img elements to grid
 
                     rowTitle.textContent = artTitle;
                     rowArtist.textContent = artArtist;

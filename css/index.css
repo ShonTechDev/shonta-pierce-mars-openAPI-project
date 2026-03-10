@@ -45,12 +45,7 @@ a {
 .grid-gallery{
     border: 2px green solid;
 }
-.art-flex-box {
-    display: flex;
-    border: 2px black solid;
-    width: 50%;
-    justify-content: center;
-}
+
 
 .hero-section {
     border: 2px black solid;
@@ -61,6 +56,39 @@ a {
     height: 10%;
 }
 
-.grid-art-mini-img {
+#art-title,h4 {
+    font-style: italic;
+}
 
+
+.art-flex-box {
+    display: flex;
+    border: 2px black solid;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.art-flex-box img{
+    width: 150px;
+    height: auto;
+    border: 2px black solid;
+    width: 50%;
+    justify-content: center;
+}
+
+.art-flex-box h4{
+    width: 1rem;
+    height: auto;
+    width: 50%;
+    justify-content: center;
+    padding-left: 25%;
+    font-style: italic;
+}
+
+.art-flex-box h5{
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    font-weight: lighter;
+    padding-left: 25%;
 }
