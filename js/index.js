@@ -6,7 +6,10 @@ create a website
 -minimum 2 data points (ex. artist + art type)
 -2 different endpoints:
     - https://api.artic.edu/api/v1/artworks
-    - https://api.artic.edu/api/v1/artists
+
+
+
+    - https://api.artic.edu/api/v1/artists - my second endpoint  to add
 */
 
 // Adding buttons via id's in html
