@@ -303,3 +303,65 @@ h1 > p {
     font-size: 2rem;
     margin: 4rem;
 }
+
+/* ============================================================================================================= */
+/* ===========Tablet style code =======*/
+/* ============================================================================================================= */
+
+@media (max-width: 820px) {
+
+   body {
+    font-size: 23px;
+    }
+
+    header nav ul {
+    /* position: fixed; */
+    width: 20%;
+    background-color: rgb(4, 2, 77);
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    /* padding-top: 0.7rem; */
+    list-style-type: none;
+    font-family: serif;
+    font-weight: 500;
+    font-size: small;    
+    color: white;
+}
+
+section {
+    margin-left: -500%;
+
+}
+}
+    /* ============================================================================================================= */
+/* ===========Mobile style code =======*/
+/* ============================================================================================================= */
+@media (max-width: 375px) { 
+
+   body {
+    font-size: 23px;
+    }
+
+    header nav ul {
+    /* position: fixed; */
+    width: 20%;
+    background-color: rgb(4, 2, 77);
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    /* padding-top: 0.7rem; */
+    list-style-type: none;
+    font-family: serif;
+    font-weight: 500;
+    font-size: small;    
+    color: white;
+}
+
+section {
+    margin-left: -500%;
+
+}
+}
