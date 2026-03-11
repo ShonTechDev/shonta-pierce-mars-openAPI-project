@@ -193,39 +193,6 @@ button:hover {
     color: rgb(4, 2, 77)
 }
 
-/* ================GRID GALLERY=============== */
-
-.grid-gallery{
-    background-color: rgb(241, 232, 220);
-    padding: 2rem;
-    margin: 2rem;
-}
-
-/* ===============Bottom Section================ */
-
-.bottom-section {
-    background-image:url('../images/art_institute_gallery_gaze.jpg');
-    height: 4rem;
-    /* background-size: 100%; */
-    background-repeat: repeat;
-    background-position: center;
-    border-top: 2px solid tan;
-    width: 100%;
-    margin-top: 2rem;
-
-}
-
-.bottom-section h2 {
-   text-shadow: 3px 1px 1px tan;
-
-}
-
-
-.bottom-section p {
-    background-color: tan;
-
-}
-
 /* ========================GRID GALLERY======================== */
 
 #art-image {
@@ -303,6 +270,41 @@ h1 > p {
     font-size: 2rem;
     margin: 4rem;
 }
+
+/* ================GRID GALLERY=============== */
+
+.grid-gallery{
+    background-color: rgb(241, 232, 220);
+    padding: 2rem;
+    margin: 2rem;
+}
+
+/* ===============Bottom Section================ */
+
+.bottom-section {
+    background-image:url('../images/art_institute_gallery_gaze.jpg');
+    height: 4rem;
+    /* background-size: 100%; */
+    background-repeat: repeat;
+    background-position: center;
+    border-top: 2px solid tan;
+    width: 100%;
+    margin-top: 2rem;
+
+}
+
+.bottom-section h2 {
+   text-shadow: 3px 1px 1px tan;
+
+}
+
+
+.bottom-section p {
+    background-color: tan;
+
+}
+
+
 
 /* ============================================================================================================= */
 /* ===========Tablet style code =======*/

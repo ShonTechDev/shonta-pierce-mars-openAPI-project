@@ -11,6 +11,7 @@ create a website
 
 // Adding buttons via id's in html
 const artBtn = document.querySelector("#get-art");
+const artBtnMore = document.querySelector("#get-more-art");
 const randomBtn = document.querySelector("#get-random");
 
 //api display from my fetch
@@ -81,7 +82,7 @@ const artistImage = document.querySelector("#artist-image");
 
                 const randomIndex = Math.floor(Math.random() * artworksWithImages.length); //uses my filtered array to remove artwork without imgs
 
-                const artwork = artworks[randomIndex]; //select random index for artwork
+                const artwork = artworksWithImages[randomIndex]; //select random index for artwork
 
                 const artTitle = artwork.title;
                 const artArtist = artwork.artist_display;
@@ -139,6 +140,7 @@ function fetchArtist() {
     artBtn.addEventListener("click", fetchArtWork);
     randomBtn.addEventListener("click", fetchRandomArtWork);
     artistBtn.addEventListener("click", fetchArtist); 
+    artBtnMore.addEventListener("click", fetchArtWork);
 
     //main section play buttons
 
