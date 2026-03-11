@@ -18,10 +18,10 @@ This project pulls data from two API endpoints, providing multiple datapoints pr
 These endpoints provide artwork titles, artists, artwork images, and artist details.
 
 How to run:
-1. Download the files from the current GitHub repository.
-2. Make sure all project folders remain together and included (HTML, CSS, JSS, and images).
-3. Locate and run the index.html file in your browser.
-4. Use the buttons on the page to fetch artwork or artists from the API.
+1) Download the files from the current GitHub repository.
+2) Make sure all project folders remain together and included (HTML, CSS, JSS, and images).
+3) Locate and run the index.html file in your browser.
+4) Use the buttons on the page to fetch artwork or artists from the API.
 
 Technologies Used
 -HTML, CSS, JS, Art Institute of Chicago Open API
