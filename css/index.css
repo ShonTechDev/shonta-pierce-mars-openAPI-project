@@ -22,8 +22,9 @@ header nav ul {
     color: white;
 }
 
-a:visited {
-    color: white;
+nav + a:visited {
+    /* color: white; */
+    color: pink;
     text-decoration: none;
     text-decoration: none;
 }
@@ -31,7 +32,12 @@ a:visited {
 a {
     text-decoration: none;
     color: white;
+    margin: 2rem;
 }
+
+a:hover {
+    cursor: pointer;
+} 
 
 .portfolio-nav-link li{
     border: solid 2px white;
@@ -43,20 +49,184 @@ a {
     height: 4rem;
     padding-top: 1.5rem;
 } */
+
+.signature-font {
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 1px 1px 1px white;
+  color: rgb(7, 2, 138);
+}
+.art-institute-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*================ Main Section ===========*/
+main {
+    position: relative;
+    width: 100%;
+    height: 64vh;
+    overflow: hidden;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: thinner;
+
+    text-wrap: wrap;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+main > h1{
+    
+    padding-top: 200px;
+    padding-left: 15px;
+
+    /* position: absolute; /* centers */
+    /* top: 100%;  centers */
+    /* left: 50%;  centers */
+    /* transform: translate(-50%, -50%);  centers */
+    /* z-index: 999999; centers */
+
+}
+
+main > p {
+    padding-left: 20px;
+}
+
+/* =======RED BUTTON WATCH ANNAS STORY=========== */
+
+main > ul > li {
+    margin-left: 1.5%;
+    padding: .7%;
+    list-style: none;
+    background-color: rgb(11, 5, 176);
+    width: 17%;
+    border-radius: 0.2rem;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+main > ul > li:hover {
+    background-color: white;
+    color: rgb(6, 3, 108);
+    border: 2px solid rgb(6, 3, 108);
+}
+
+/* =======WHITE BUTTON Learn more about us =========== */
+
+main > ul > li + li {
+
+    border: 2px solid rgb(11, 5, 176);
+    margin-left: 20%;
+    padding: 1%;
+    list-style: none;
+    background-color: white;
+    width: 15%;
+    color: rgb(11, 5, 176); 
+
+    border-radius: 0.2rem;
+}
+
+.art-explorer-buttons {
+   z-index: 999999;
+   position: absolute;
+   top: 61%;
+   left: 49.5%;
+   transform: translate(-50%, -50%);
+   padding: 10px 20px;
+   text-align: center;
+   background-color: rgb(4, 2, 77);
+   cursor: cursor;
+}
+
+
+.art-explorer-buttons:hover {
+    background-color:white;
+    color: rgb(6, 3, 108);
+}
+
+/* =============== Background Video Button controls========*/
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the section */
+    z-index: -1; /* Keeps video behind content */
+}
+
+/* Controls */
+.controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 5px 5px;
+    border: none;
+    background-color:rgb(4, 2, 77);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    z-index: 999999;
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-1909%, 720%);
+    /* padding: 10px 20px; */
+
+
+}
+
+button:hover {
+    background-color:rgb(144, 189, 231);
+    color: rgb(4, 2, 77)
+}
+
+/* ================GRID GALLERY=============== */
+
 .grid-gallery{
-    border: 2px green solid;
+    background-color: rgb(241, 232, 220);
+    padding: 2rem;
+    margin: 2rem;
 }
 
+/* ===============Bottom Section================ */
 
-.hero-section {
-    border: 2px black solid;
+.bottom-section {
     background-image:url('../images/art_institute_gallery_gaze.jpg');
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    height: 4rem;
+    /* background-size: 100%; */
+    background-repeat: repeat;
     background-position: center;
+    border-top: 2px solid tan;
+    width: 100%;
+    margin-top: 2rem;
 
 }
+
+.bottom-section h2 {
+   text-shadow: 3px 1px 1px tan;
+
+}
+
+
+.bottom-section p {
+    background-color: tan;
+
+}
+
+/* ========================GRID GALLERY======================== */
 
 #art-image {
     height: 10%;
@@ -69,7 +239,6 @@ a {
 
 .art-flex-box {
     display: flex;
-    border: 2px black solid;
     width: 100%;
     justify-content: space-evenly;
 }
@@ -77,7 +246,6 @@ a {
 .art-flex-box img{
     width: 150px;
     height: auto;
-    border: 2px black solid;
     width: 50%;
     justify-content: center;
 }
@@ -107,4 +275,31 @@ a {
 #artist-image {
     width: 200px;
     height: auto;
+}
+/* sections */
+.about-the-artwork {
+    background-color: rgb(248, 229, 204);
+}
+
+.button-styles {
+    border: 2px solid rgb(11, 5, 176);
+    background-color: white;
+    background-color: white;
+    color: black;
+    padding: .3rem;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.top-of-page-button {
+    margin-top: 8px;
+}
+h1 > p {
+    text-align: center;
+}
+
+.get-artist {
+    font-size: 2rem;
+    margin: 4rem;
 }

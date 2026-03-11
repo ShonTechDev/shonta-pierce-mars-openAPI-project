@@ -27,23 +27,36 @@
             </ul>
         </nav>
     </header>
+<!-- =========================================================================== -->
     <section id="Home" class="welcome-banner">
-        <h3>Explore Art with:</h3> <!--cursive font-->
+            <h3>Explore Art with us on a <span class="signature-font">Virtual Visit </span>to:</h3>
+            
     </section>
-    <section class="hero-section">
-        <h1>The Art Institute of Chicago</h1>
-        <h2>Art Explorer</h2> <!--over an art pallete img-->
-        <p>paragraph explaining what the Art Explorer does and what the user needs to do/enter</p>
-    <section class="welcome-banner">
-        <h3>Start Exploring:</h3> <!--cursive font-->
-        <a href="#Recent-Art"><button id="get-art">Get Most Recent Art</button></a>
-        <!-- <button id="get-artist">Get Artist</button> -->
-        <a href="#Gaze-Gallery"><button id="get-random">Get Random Artwork</button></a>
-    </section>
+<!--====================== MAIN section below =======================  -->
+    <main>
+        <video autoplay muted loop id="background-video">
+            <source src="./images/hero-video-museum.mp4" type="video/mp4" alt="video of first-person-view walking through a museum gallery with paintings on the wall">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button id="play-btn"><img src="./images/play_arrow.svg" alt="play main video icon"></button>
+            <button id="pause-btn" alt="pause main video icon"><img src="./images/pause_icon.svg"></button>
+        </div>
+        <h1 class="art-institute-title">The Art Institute of Chicago
+        <h1 class="art-institute-title signature-font">Art Explorer</h1>
+        <ul>            
+            <li><a href="#Random-artist" class="art-explorer-buttons">Search by Artist</a></li>
+        </ul>
+    </main>
+<!--====================== MAIN VIDEO SECTION =======================  -->
+<!--====================== HORIZONTAL VIDEO SCROLL SECTION ================-->
+    <section class="art-explorer-tool-section">
+            <a href="#Recent-Art"id="get-art" class="button-styles">Get Most Recent Art</a>
+            <a href="#Gaze-Gallery" id="get-random" class="button-styles">Get Random Artwork</a>
     </section>
     <section class="about-the-artwork">
-        <h3>About the Artwork</h3>
-        <p>a paragraph about where the API is pulling from/where the art is from and it's venue/this art is displayed in the [insert link to venue]</p>
+        <h3>About the Artwork & Museum</h3>
+        <p>Founded in 1879, the Art Institute of Chicago is a premier, world-renowned museum located in the heart of downtown Chicago’s Grant Park at 111 S. Michigan Ave.</p>
     </section>
     <!-------------------------- SINGLE RANDOMIZED ART---------------->
     <section id="Gaze-Gallery" class="single-art-gaze">
@@ -53,7 +66,8 @@
             <img id="art-image" src="" alt="Artwork if available">
         </div>
         <span id="artist-name">Art Artist</span> <!--make signature font--> <br>
-        <a href="#Gaze-Gallery"><button id="get-random-more">View More Art</button></a>
+        <br>
+        <a href="#Gaze-Gallery" id="get-random-more" class="button-styles">View a New Artwork</a>
     </section>
     <!-------------------------- GRID ART GALLERY ---------------->
     <section id="Recent-Art" class="grid-gallery">
@@ -75,15 +89,21 @@
                 <h5>Artist</h5>
             </div>
         </div>
+                    <a href="#Recent-Art"id="get-art" class="button-styles">Get More: Art -> </a>
     </section>
     <!-----------------------^^^^^ GRID ART GALLERY ^^^^---------------->
 
     <!-----------------------^^^^^ View by Artist ^^^^---------------->
     <section id="Random-artist" class="artist-info">
-        <h3>Featured Artist</h3>
-        <p id="artist-info"> Click to browse incredible artwork by Artist</p>
-        <button id="get-artist">Get Random Artist</button>
-        <img id="artist-image" src="" alt="Artist Image if Available">
+        <h3>Featured Artist Spotlight:</h3>
+        <p id="artist-info"> Click below to browse Artists!</p>
+        <img id="artist-image" src="" alt="Image of Artist if Available"><br>
+        <br>
+        <a id="get-artist" class="button-styles">Get Random Artist</a> 
+        <br>
+        <br>
+        <br>
+        <a href=#Home class="button-styles top-of-page-button" >Start Over</a>
     </section>
 
 
@@ -94,9 +114,11 @@
 
 
     <!-------------------- ABOUT THE ART INSTITUTION OF CHICAGO ---------------->
-    <section>
+    <section class="bottom-section">
         <h2>About the Art Institute of Chicago</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aliquam ut pariatur. Molestias saepe architecto veniam quod ullam deserunt qui, doloremque hic ut, dicta error, ducimus asperiores corporis dolor fugiat.</p>
+        <p>Founded in 1879, the Art Institute of Chicago is a premier, world-renowned museum located in the heart of downtown Chicago’s Grant Park at 111 S. Michigan Ave. Visit here to experience extensive Impressionist collections and well-known, iconic bronze lions. Experience in person! <a href="https://www.artic.edu/" target="_blank">Visit</a> 
+        <br>
+        </p>
     </section>
 
     <script src="js/index.js"></script>
