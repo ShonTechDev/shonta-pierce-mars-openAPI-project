@@ -5,7 +5,6 @@ body{
     /* background-color: #001167; */
     text-align: center;
 }
-
 header nav ul {
     /* position: fixed; */
     width: 100%;
@@ -34,22 +33,18 @@ a {
     color: white;
     margin: 2rem;
 }
-
 a:hover {
     cursor: pointer;
 } 
-
 .portfolio-nav-link li{
     border: solid 2px white;
     height: 100%;
 }
-
 /* .welcome-banner{
     background-color: blue;
     height: 4rem;
     padding-top: 1.5rem;
 } */
-
 .signature-font {
   font-family: "Momo Signature", cursive;
   font-weight: 400;
@@ -61,7 +56,6 @@ a:hover {
     text-align: center;
     margin-bottom: 20px;
 }
-
 /*================ Main Section ===========*/
 main {
     position: relative;
@@ -94,7 +88,6 @@ main > h1{
 main > p {
     padding-left: 20px;
 }
-
 /* =======RED BUTTON WATCH ANNAS STORY=========== */
 
 main > ul > li {
@@ -168,7 +161,6 @@ main > ul > li + li {
     display: flex;
     gap: 10px;
 }
-
 button {
     padding: 5px 5px;
     border: none;
@@ -177,46 +169,36 @@ button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-
     z-index: 999999;
     /* position: absolute; */
     top: 50%;
     left: 50%;
     transform: translate(-1909%, 720%);
     /* padding: 10px 20px; */
-
-
 }
-
 button:hover {
     background-color:rgb(144, 189, 231);
     color: rgb(4, 2, 77)
 }
-
 /* ========================GRID GALLERY======================== */
 
 #art-image {
     height: 10%;
 }
-
 #art-title,h4 {
     font-style: italic;
 }
-
-
 .art-flex-box {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
-
 .art-flex-box img{
     width: 150px;
     height: auto;
     width: 50%;
     justify-content: center;
 }
-
 .art-flex-box h4{
     width: 1rem;
     height: auto;
@@ -225,7 +207,6 @@ button:hover {
     padding-left: 25%;
     font-style: italic;
 }
-
 .art-flex-box h5{
     width: 50%;
     height: 50%;
@@ -233,12 +214,10 @@ button:hover {
     font-weight: lighter;
     padding-left: 25%;
 }
-
 .single-art-gaze img {
     width: 450px;
     height: auto;
 }
-
 #artist-image {
     width: 200px;
     height: auto;
@@ -247,7 +226,6 @@ button:hover {
 .about-the-artwork {
     background-color: rgb(248, 229, 204);
 }
-
 .button-styles {
     border: 2px solid rgb(11, 5, 176);
     background-color: white;
@@ -258,29 +236,23 @@ button:hover {
     font-weight: bold;
     margin: 20px;
 }
-
 .top-of-page-button {
     margin-top: 8px;
 }
 h1 > p {
     text-align: center;
 }
-
 .get-artist {
     font-size: 2rem;
     margin: 4rem;
 }
-
 /* ================GRID GALLERY=============== */
-
 .grid-gallery{
     background-color: rgb(241, 232, 220);
     padding: 2rem;
     margin: 2rem;
 }
-
 /* ===============Bottom Section================ */
-
 .bottom-section {
     background-image:url('../images/art_institute_gallery_gaze.jpg');
     height: 4rem;
@@ -290,26 +262,17 @@ h1 > p {
     border-top: 2px solid tan;
     width: 100%;
     margin-top: 2rem;
-
 }
-
 .bottom-section h2 {
    text-shadow: 3px 1px 1px tan;
-
 }
-
-
 .bottom-section p {
     background-color: tan;
 
 }
-
-
-
 /* ============================================================================================================= */
 /* ===========Tablet style code =======*/
 /* ============================================================================================================= */
-
 @media (max-width: 820px) {
     #background-video{
         height: 40vh;
@@ -361,10 +324,6 @@ h1 > p {
         font-size: 1rem;
     }
 }
-
-
-
-
     /* ============================================================================================================= */
 /* ===========Mobile style code =======*/
 /* ============================================================================================================= */
