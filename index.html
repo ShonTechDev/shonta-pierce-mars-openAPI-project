@@ -16,13 +16,13 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#Home">Home</a></li>
-                <li><a href="#Art-Explorer">Art Explorer</a></li>
-                <li><a href="#Recent-Art">By Recent Art</a></li>
-                <li><a href="#Gaze-Gallery">Gaze the Gallery</a></li>
-                <li><a href="#Random-artist">By Artist</a></li>
-                <li><a href="https://www.artic.edu/" target="_blank">Visit The Museum</a></li>
-                <li class="portolio-nav-link"><a href="https://github.com/ShonTechDev/shonta-pierce-mars" target="_blank">My Portfolio</a></li>
+                <!-- <li><a href="#Home">Home</a></li> -->
+                <!-- <li><a href="#Art-Explorer">Art Explorer</a></li> -->
+                <li><a href="#Recent-Art">Gaze Most Recent Art</a></li>
+                <li><a href="#Gaze-Gallery">Gaze Random Art</a></li>
+                <!-- <li><a href="#Random-artist">By Artist</a></li> -->
+                <!-- <li><a href="https://www.artic.edu/" target="_blank">Visit The Museum</a></li> -->
+                <!-- <li class="portolio-nav-link"><a href="https://github.com/ShonTechDev/shonta-pierce-mars" target="_blank">My Portfolio</a></li> -->
                 <!-- <li>Nav Item 4</li> -->
             </ul>
         </nav>
@@ -42,22 +42,19 @@
             <button id="play-btn"><img src="./images/play_arrow.svg" alt="play main video icon"></button>
             <button id="pause-btn" alt="pause main video icon"><img src="./images/pause_icon.svg"></button>
         </div>
-        <h1 class="art-institute-title">The Art Institute of Chicago
+        <h1 class="art-institute-title">The Art Institute of Chicago</h1>
         <h1 class="art-institute-title signature-font">Art Explorer</h1>
         <ul>            
-            <li><a href="#Random-artist" class="art-explorer-buttons">Search by Artist</a></li>
+            <!-- <li><a href="#Random-artist" class="art-explorer-buttons">Search by Artist</a></li> -->
         </ul>
     </main>
-<!--====================== MAIN VIDEO SECTION =======================  -->
-<!--====================== HORIZONTAL VIDEO SCROLL SECTION ==========-->
-    <section class="art-explorer-tool-section">
+<!--MAIN VIDEO SECTION-->
+<!--HORIZONTAL VIDEO SCROLL SECTION-->
+    <!-- <section class="art-explorer-tool-section">
             <a href="#Recent-Art"id="get-art" class="button-styles">Get Most Recent Art</a>
             <a href="#Gaze-Gallery" id="get-random" class="button-styles">Get Random Artwork</a>
-    </section>
-    <section class="about-the-artwork">
-        <h3>About the Artwork & Museum</h3>
-        <p>Founded in 1879, the Art Institute of Chicago is a premier, world-renowned museum located in the heart of downtown Chicago’s Grant Park at 111 S. Michigan Ave.</p>
-    </section>
+    </section> -->
+
     <!------ SINGLE RANDOMIZED ART------>
     <section id="Gaze-Gallery" class="single-art-gaze">
         <h2>Art Admiration Zone: Art Gaze with Us</h2>
@@ -67,7 +64,7 @@
         </div>
         <span id="artist-name">Art Artist</span><br>
         <br>
-        <a href="#Gaze-Gallery" id="get-random-more" class="button-styles">View a New Artwork</a>
+        <a href="#Recent-Art" id="get-art" class="button-styles">Gallery Gaze: View a Random Artwork</a>
     </section>
     <!-------------------------- GRID ART GALLERY ---------------->
     <section id="Recent-Art" class="grid-gallery">
@@ -89,12 +86,12 @@
                 <h5>Artist</h5>
             </div>
         </div>
-        <a href="#Recent-Art" id="get-more-art" class="button-styles">Get More Most Recent Art -> </a>
+        <a href="#Recent-Art" id="get-more-art" class="button-styles button-mobile">Get Updated Art</a>
     </section>
     <!-----------------------^^^^^ GRID ART GALLERY ^^^^---------------->
 
     <!-----------------------^^^^^ View by Artist ^^^^---------------->
-    <section id="Random-artist" class="artist-info">
+    <!-- <section id="Random-artist" class="artist-info">
         <h3>Featured Artist Spotlight:</h3>
         <p id="artist-info"> Click below to browse Artists!</p>
         <img id="artist-image" src="" alt="Image of Artist if Available"><br>
@@ -104,12 +101,15 @@
         <br>
         <br>
         <a href=#Home class="button-styles top-of-page-button" >Start Over</a>
-    </section>
+    </section> -->
     <!-------------------- ABOUT THE ART INSTITUTION OF CHICAGO ---------------->
+    
     <section class="bottom-section">
-        <h2>About the Art Institute of Chicago</h2>
-        <p>Founded in 1879, the Art Institute of Chicago is a premier, world-renowned museum located in the heart of downtown Chicago’s Grant Park at 111 S. Michigan Ave. Visit here to experience extensive Impressionist collections and well-known, iconic bronze lions. Experience in person! <a href="https://www.artic.edu/" target="_blank">Visit</a></p>
-        <br>
+        <div class="about-the-artwork-and-museum">
+            <h3>The Art Institute of ChicagoAbout the Artwork & Museum</h3>
+            <p>Founded in 1879, the Art Institute of Chicago is a premier, world-renowned museum located in the heart of downtown Chicago’s Grant Park at 111 S. Michigan Avenue.<br>Visit to experience extensive Impressionist collections and well-known, iconic bronze lions. Experience in-person!
+            <span><a href="https://www.artic.edu/" class="button-styles" target="_blank">Visit the Museum</a></span></p>
+        </div>
     </section>
 
     <script src="js/index.js"></script>
