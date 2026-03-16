@@ -155,20 +155,16 @@ main > ul > li + li {
 button {
     padding: 5px 5px;
     border: none;
-    border: 10px ridge rgba(242, 108, 13, 0.685);
     color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-
     z-index: 999999;
-    /* position: absolute; */
     top: 50%;
     left: 50%;
-    /* transform: translate(-1909%, 720%); */
-    /* padding: 10px 20px; */
-
-
+    border: none;
+    background-color:rgb(4, 2, 77);
+    transform: translate(-1909%, 720%);
 }
 button:hover {
     background-color:rgb(144, 189, 231);
