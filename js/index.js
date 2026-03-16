@@ -144,7 +144,7 @@ function fetchArtist() {
 
     //connecting the buttons to the endpoints
     artBtn.addEventListener("click", fetchArtWork);
-    // randomBtn.addEventListener("click", fetchRandomArtWork); //revision-removed extra buttons
+    randomBtn.addEventListener("click", fetchRandomArtWork);
     // artistBtn.addEventListener("click", fetchArtist); //revision-removed search artist button
     artBtnMore.addEventListener("click", fetchArtWork);
 
