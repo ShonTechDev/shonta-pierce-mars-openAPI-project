@@ -26,9 +26,12 @@ const artist = document.querySelector("#artist-name");
 const image = document.querySelector("#art-image");
 //adding selector for grid rows to place recent art there
 const gridRows = document.querySelectorAll(".art-flex-box div");
-//additional viewing buttons
-// const randomMoreBtn = document.querySelector("#get-random-more"); //revision-removed extra buttons
-// randomMoreBtn.addEventListener("click", fetchRandomArtWork); //revision-removed extra buttons
+
+// ----------
+// additional viewing buttons
+const randomMoreBtn = document.querySelector("#get-random-more"); //revision-removed extra buttons
+randomMoreBtn.addEventListener("click", fetchRandomArtWork); //revision-removed extra buttons
+// -------------
 
 //2nd endpoint selectors for artists
 const artistBtn = document.querySelector("#get-artist");
@@ -163,5 +166,3 @@ function fetchArtist() {
         video.pause();
     });
 });
-
-
