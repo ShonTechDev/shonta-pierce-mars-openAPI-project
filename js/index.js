@@ -71,7 +71,6 @@ const artistImage = document.querySelector("#artist-image");
                 console.error("Error fetching data:", error);
             });
         }
-
 // ======== 2nd Fetch======randomizer===============
 
 //implementing math.floor use my data.data[0] indexting to select a new piece and display it randomly as if walking through the gallery
@@ -114,7 +113,6 @@ const artistImage = document.querySelector("#artist-image");
         }
 
 // ================= Artist Spotlight ===============
-
 function fetchArtist() {
     fetch('https://api.artic.edu/api/v1/artists')
         .then(response => response.json())
@@ -144,8 +142,6 @@ function fetchArtist() {
             console.error("Error fetching artist:", error);
         });
 }
-
-
     //connecting the buttons to the endpoints
     artBtn.addEventListener("click", fetchArtWork);
     randomBtn.addEventListener("click", fetchRandomArtWork);
