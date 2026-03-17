@@ -14,15 +14,24 @@ const artBtn = document.querySelector("#get-art");
 const artBtnMore = document.querySelector("#get-more-art");
 const randomBtn = document.querySelector("#get-random");
 
+//footer
+const footer = document.createElement("footer");
+const year = new Date().getFullYear();
+footer.textContent = `© ${year} Shonta Pierce`;
+document.body.append(footer);
+
 //api display from my fetch
 const title = document.querySelector("#art-title");
 const artist = document.querySelector("#artist-name");
 const image = document.querySelector("#art-image");
 //adding selector for grid rows to place recent art there
 const gridRows = document.querySelectorAll(".art-flex-box div");
-//additional viewing buttons
-const randomMoreBtn = document.querySelector("#get-random-more");
-randomMoreBtn.addEventListener("click", fetchRandomArtWork);
+
+// ----------
+// additional viewing buttons
+const randomMoreBtn = document.querySelector("#get-random-more"); //revision-removed extra buttons
+randomMoreBtn.addEventListener("click", fetchRandomArtWork); //revision-removed extra buttons
+// -------------
 
 //2nd endpoint selectors for artists
 const artistBtn = document.querySelector("#get-artist");
@@ -35,7 +44,8 @@ const artistImage = document.querySelector("#artist-image");
 // ====== 1st 3 artworks as updated in API == Fetch art & artist =======
 
         function fetchArtWork() {
-            fetch('https://api.artic.edu/api/v1/artworks?page=' + Math.floor(Math.random()*50) + '&limit=100')
+            fetch('https://api.artic.edu/api/v1/artworks?page=' + Math.floor(Math.random()*50) + '&limit=3&fields=id,title,image_id,artist_display')
+            // https://api.artic.edu/api/v1/artworks?limit=3&fields=id,title,image_id,artist_display&sort=updated_at&sort_order=desc //updated link to this for sorting ascending and descending order--- But kept showing same artwork. Huge scope lesson learned, so now I'm prioritizing a more varied experience than an "updated one"
             .then(response => response.json())
             .then(data => {
                 
@@ -70,7 +80,7 @@ const artistImage = document.querySelector("#artist-image");
 
     function fetchRandomArtWork() {
         //second fetch / click navigation / = Art Admiration Zone
-        fetch('https://api.artic.edu/api/v1/artworks?page=' + Math.floor(Math.random()*50) + '&limit=100')
+        fetch('https://api.artic.edu/api/v1/artworks?page=' + Math.floor(Math.random()*50) + '&limit=1&fields=id,title,image_id,artist_display')
              .then(response => response.json()) //.then sends a request, then we get access to the response / returns a promise 
              .then(data => {
 
@@ -139,7 +149,7 @@ function fetchArtist() {
     //connecting the buttons to the endpoints
     artBtn.addEventListener("click", fetchArtWork);
     randomBtn.addEventListener("click", fetchRandomArtWork);
-    artistBtn.addEventListener("click", fetchArtist); 
+    // artistBtn.addEventListener("click", fetchArtist); //revision-removed search artist button
     artBtnMore.addEventListener("click", fetchArtWork);
 
     //main section play buttons
@@ -157,5 +167,3 @@ function fetchArtist() {
         video.pause();
     });
 });
-
-
