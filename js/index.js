@@ -11,8 +11,8 @@ create a website
 
 // Adding buttons via id's in html
 const artBtn = document.querySelector("#get-art");
-const artBtnMore = document.querySelector("#get-more-art");
-const randomBtn = document.querySelector("#get-random");
+const artBtnMore = document.querySelector("#get-art");
+// const randomBtn = document.querySelector("#get-random");
 
 //footer
 const footer = document.createElement("footer");
@@ -144,22 +144,28 @@ function fetchArtist() {
 }
     //connecting the buttons to the endpoints
     artBtn.addEventListener("click", fetchArtWork);
-    randomBtn.addEventListener("click", fetchRandomArtWork);
+    // randomBtn.addEventListener("click", fetchRandomArtWork);
     // artistBtn.addEventListener("click", fetchArtist); //revision-removed search artist button
     artBtnMore.addEventListener("click", fetchArtWork);
 
     //main section play buttons
 
     document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById("background-video");
-    const playBtn = document.getElementById("play-btn");
-    const pauseBtn = document.getElementById("pause-btn");
+    const video = document.querySelector("#background-video");
+    const playBtn = document.querySelector("#play-btn");
+    const pauseBtn = document.querySelector("#pause-btn");
 
-    playBtn.addEventListener("click", function() {
+    console.log("video:", video);
+    console.log("play button:", playBtn);
+    console.log("pause button:", pauseBtn);
+
+    playBtn.addEventListener("click", function () {
+        console.log("Play button clicked");
         video.play();
     });
 
-    pauseBtn.addEventListener("click", function() {
+    pauseBtn.addEventListener("click", function () {
+        console.log("Pause button clicked");
         video.pause();
     });
 });
